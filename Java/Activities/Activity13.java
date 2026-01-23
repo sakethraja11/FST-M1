@@ -1,20 +1,27 @@
-package Activities;
+package activities;
 
-interface Addable {
-    int add(int a, int b);
-}
- 
-public class Activity12 {
+
+import java.util.*;
+
+public class Activity13 {
+
     public static void main(String[] args) {
- 
-        // Lambda expression without return keyword.
-        Addable ad1 = (a, b) -> (a + b);
-        System.out.println(ad1.add(10, 20));
- 
-        // Lambda expression with return keyword.
-        Addable ad2 = (int a, int b) -> {
-            return (a + b);
-        };
-        System.out.println(ad2.add(100, 200));
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        Random indexGen = new Random();
+        
+        System.out.print("Enter integers please ");
+        System.out.println("(EOF or non-integer to terminate): ");
+
+        while(scan.hasNextInt()) {
+            list.add(scan.nextInt());
+        }
+
+        Integer nums[] = list.toArray(new Integer[0]);
+        int index = indexGen.nextInt(nums.length);
+        System.out.println("Index value generated: " + index);
+        System.out.println("Value in arary at generated index: " + nums[index]);
+
+        scan.close();
     }
 }
