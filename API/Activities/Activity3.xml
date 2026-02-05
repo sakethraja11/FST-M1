@@ -1,0 +1,371 @@
+?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dd9a31db-e400-456b-8b0c-2e1a797263f3" created="3.64.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 11" projectVersion="" updated="3.64.0 2025-12-11T09:36:10Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="f803a60f-3e4a-4aa3-977a-305bfbb49307" lastUpdated="2026-02-05T16:28:52.686+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="d98441a6-26dc-470e-8388-2c7327615503"/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://petstore.swagger.io</con:endpoint>
+    </con:endpoints>
+    <con:resource name="User" path="/v2/user" id="bae36110-6206-47f6-862c-7ce992175712">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="User" id="1f776052-29d7-426d-bb6f-3a0b2d808d01" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://petstore.swagger.io/v2/user">user:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="fcd905a2-e1cb-45dd-89eb-6731f41e0ca0" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Login" path="/v2/user/login" id="8f401da2-3ba0-4714-a19f-23adad3adc77">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Login" id="91f4bade-137a-4f90-a810-eead474475c7" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>{username}</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>{username}</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>password</con:name>
+            <con:value>{password}</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>{password}</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:log="https://petstore.swagger.io/v2/user/login">log:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="6d67e006-8f64-46e7-ab50-503d41145cf0" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:parameters>
+            <con:entry key="password" value="{password}"/>
+            <con:entry key="username" value="{username}"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+            <con:entry>password</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Username" path="/v2/user/{username}" id="f4aae00d-ac41-48f9-a3cf-91afc5e41959">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Username" id="4f7287a2-0649-42a5-b7ac-7e06ab4a797c" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>username</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>username</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>405</con:status>
+          <con:params/>
+          <con:element>apiResponse</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://petstore.swagger.io/v2/user/">user:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="86c3f86c-44f3-490a-9ec9-cdc39565011a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:parameters>
+            <con:entry key="username" value="username"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="Username 2" id="c75209b1-c5e5-4b54-8559-ae6f9159fdf7" method="DELETE">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>username</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>username</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:sake="https://petstore.swagger.io/v2/user/saketh">sake:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="330b9c9a-38b3-4782-895f-ed34d0b76a94" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:parameters>
+            <con:entry key="username" value="username"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Logout" path="/v2/user/logout" id="a6b4d215-c11e-4141-9ece-1164a1905eb8">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Logout" id="9cb37d74-d17a-4fe1-8230-c2d447b0b83c" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:log="https://petstore.swagger.io/v2/user/logout">log:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="5577f6f4-1563-432b-8bb2-644b96fe7863" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="bfe008ae-e143-4898-90ee-5d8c112890dc" name="https://petstore.swagger.io Test Suite">
+    <con:settings id="ea9cb3e2-1e95-4768-80e3-c54a2d7b7710"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="be3044d3-3b2e-4994-bf47-483e89513539" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="POST Request" id="16f99adc-aa44-46d2-b0fc-9321ef49117c">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user" methodName="User" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST Request" id="fcd905a2-e1cb-45dd-89eb-6731f41e0ca0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request>{
+    "id": 511,
+    "username": "saketh",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@doe.com",
+    "password": "testuser",
+    "phone": "234567890",
+    "userStatus": 0
+}</con:request>
+            <con:originalUri>https://petstore.swagger.io/v2/user</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b9244e1e-89e4-4152-9c44-1b114f8270e5" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Login Request" id="1c937a29-15ce-4e58-865e-9f724cd93f79">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Login Request" id="6d67e006-8f64-46e7-ab50-503d41145cf0" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="6f7f58c7-b215-4832-9048-dbb793094793" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="${POST Request#Password}"/>
+              <con:entry key="username" value="${POST Request#Username}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET Request" id="1925f564-575b-4747-98e1-e8c793e295a4">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/{username}" methodName="Username" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET Request" id="86c3f86c-44f3-490a-9ec9-cdc39565011a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="725a36fe-147a-4294-91ed-528cf85d3896" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="${POST Request#Request#$['username']}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Logout Request" id="7f391891-da34-4a4e-8936-6dc07d5e28f4">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/logout" methodName="Logout" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Logout Request" id="5577f6f4-1563-432b-8bb2-644b96fe7863" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/logout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1b23a0f1-180a-41be-9e09-6e62cd003bf6" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="DELETE Request" id="0649a0ef-c7dc-4cb1-bca8-a781440e6ca6">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/{username}" methodName="Username 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DELETE Request" id="330b9c9a-38b3-4782-895f-ed34d0b76a94" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/saketh</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c3bb95dc-b9d4-41f8-89d5-87e35202890e" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="${POST Request#Request#$['username']}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
