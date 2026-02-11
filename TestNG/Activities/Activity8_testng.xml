@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ExampleSuite" thread-count="4" paralle= "classes">
+
+
+    <test name="SuiteTests" >
+        <classes>
+            <class name="suiteExample.DemoOne"/>
+            <class name="suiteExample.DemoTwo"/>
+            <class name="TestActivity.Activity1"/>
+            <class name="TestActivity.Activity2"/>
+            <class name="TestActivity.Activity3"/>
+            <class name="TestActivity.Activity5"/>
+            <class name="TestActivity.Activity6"/>
+            <class name="TestActivity.Activity7"/>
+        </classes>
+    </test>
+</suite>
